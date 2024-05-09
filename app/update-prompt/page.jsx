@@ -26,7 +26,7 @@ const EditPrompt = () => {
     if (promptId) getPromptDetails();
   }, [promptId]);
 
-  const UpdatePrompt = async (e) => {
+  const updatePrompt = async (e) => {
     e.preventDefault();
     setSubmitting(true);
     if (!promptId) return alert("Prompt ID not found");
@@ -55,7 +55,7 @@ const EditPrompt = () => {
       post={post}
       setPost={setPost}
       submitting={submitting}
-      handleSubmit={UpdatePrompt}
+      handleSubmit={updatePrompt}
     />
   );
 };
