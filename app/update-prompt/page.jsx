@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Form from "@components/Form";
 
@@ -60,4 +60,12 @@ const EditPrompt = () => {
   );
 };
 
-export default EditPrompt;
+const UpdatedPrompt = () => {
+  return (
+    <Suspense>
+      <EditPrompt />
+    </Suspense>
+  );
+};
+
+export default UpdatedPrompt;
